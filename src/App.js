@@ -25,6 +25,17 @@ import Torles from './sajatosztalyok/Torles'
 import Torles_marka from './sajatosztalyok/Torles_marka'
 
 
+//Nikié
+
+import Marka_2 from './sajatosztalyok/Marka_2'
+import Diagram_film_N from "./sajatosztalyok/Diagram_film_N";
+import Kereses_2 from "./sajatosztalyok/Kereses_2"
+import ProbaAdmin_2 from './sajatosztalyok/ProbaAdmin_2'
+import Proba_2 from "./sajatosztalyok/Proba_2";
+import Torles_2 from './sajatosztalyok/Torles_2'
+import Torles_marka_2 from './sajatosztalyok/Torles_marka_2'
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -75,8 +86,20 @@ class App extends Component {
             </li>
 
             <li className="nav-item">
+              <Link to={"/Kereses_2"} className="nav-link">
+                Keresés Nikié
+              </Link>
+            </li>
+
+            <li className="nav-item">
               <Link to={"/Proba"} className="nav-link">
                 Proba
+              </Link>
+            </li>
+            
+            <li className="nav-item">
+              <Link to={"/Proba_2"} className="nav-link">
+                Proba Nikié
               </Link>
             </li>
 
@@ -85,6 +108,13 @@ class App extends Component {
                 Marka
               </Link>
             </li>
+
+            <li className="nav-item">
+              <Link to={"/Marka_2"} className="nav-link">
+                Márka Nikié
+              </Link>
+            </li>
+
                      
 
             {showModeratorBoard && (
@@ -112,6 +142,14 @@ class App extends Component {
             </li>
             )}
 
+          {showAdminBoard && (
+            <li className="nav-item">
+              <Link to={"/Torles_2"} className="nav-link">
+                Torles Nikié
+              </Link>
+            </li>
+            )}
+
             {showAdminBoard && (
               <li className="nav-item">
                 <Link to={"/Torles_marka"} className="nav-link">
@@ -119,6 +157,14 @@ class App extends Component {
                 </Link>
               </li>
               )}
+
+          {showAdminBoard && (
+              <li className="nav-item">
+                <Link to={"/Torles_marka_2"} className="nav-link">
+                Torles_marka Nikié
+                </Link>
+              </li>
+              )}  
 
             {showAdminBoard && (
               <li className="nav-item">
@@ -128,10 +174,26 @@ class App extends Component {
               </li>
             )}
 
+        {showAdminBoard && (
+              <li className="nav-item">
+                <Link to={"/ProbaAdmin_2"} className="nav-link">
+                  AdminProba Nikié
+                </Link>
+              </li>
+            )}
+
             {showAdminBoard && (
               <li className="nav-item">
                 <Link to={"/Diagramfilm"} className="nav-link">
                   Diagramfilm
+                </Link>
+              </li>
+            )}
+
+            {showAdminBoard && (
+              <li className="nav-item">
+                <Link to={"/Diagram_film_N"} className="nav-link">
+                  Diagram Nikié
                 </Link>
               </li>
             )}
@@ -210,6 +272,16 @@ class App extends Component {
             <Route path="/Diagramfilm" component={Diagramfilm} />
             <Route path="/Torles" component={Torles} />
             <Route path="/Torles_marka" component={Torles_marka} />
+
+
+            <Route path="/Marka_2" component={Marka_2} />
+            <Route path="/Diagram_film_N" component={Diagram_film_N} />
+            <Route path="/ProbaAdmin_2" component={ProbaAdmin_2} />
+            <Route path="/Kereses_2" component={Kereses_2} />
+            <Route path="/Proba_2" component={Proba_2} />
+            <Route path="/Torles_2" component={Torles_2} />
+            <Route path="/Torles_marka_2" component={Torles_marka_2} />
+
 
           </Switch>
         </div>
