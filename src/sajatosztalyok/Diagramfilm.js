@@ -30,13 +30,19 @@ const App = () => {
   }, []);
 
   return (
-    <View style={{flex: 1, padding: 24}}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Plot
         data={[
-
-          {type: 'bar', x: dataCim, y: dataDarabszam},
+          {
+            type: 'bar',   
+            x: dataCim, 
+            y: dataDarabszam,
+            marker: {
+              color: 'green', // Az elemek színe
+            }
+          },
         ]}
-        layout={ {width: 620, height: 440, title: 'Autó vagy Motor'} }
+        layout={{ width: 500, height: 500, title: 'Motorok' }}
       />
       {isLoading ? (
         <ActivityIndicator />
