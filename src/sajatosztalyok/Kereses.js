@@ -109,7 +109,7 @@ export default class FetchExample extends React.Component {
 
           <View >
           <Text style={{color:"brown",fontSize:20,textAlign:"center",marginTop:15,marginBottom:5}}   >{item.film_cim} </Text>
-          <Image  source={{uri: IP.ipcim + item.film_kep}} style={{width:300,height:300,marginLeft:"auto",marginRight:"auto"}} />  
+          <Image  source={{uri: IP.Ipcim + item.film_kep}} style={{width:300,height:300,marginLeft:"auto",marginRight:"auto"}} />  
 
           <TouchableOpacity
         style={styles.kekgomb}
