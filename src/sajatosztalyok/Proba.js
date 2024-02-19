@@ -33,7 +33,7 @@ const App = () => {
           keyExtractor={({auto_id}) => auto_id}
           renderItem={({item}) => (
             <Text>
-              {item.auto_modell}
+              {item.auto_id}, {item.auto_modell}
             </Text>
           )}
         />
