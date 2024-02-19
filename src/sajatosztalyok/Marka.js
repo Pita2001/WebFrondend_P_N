@@ -33,7 +33,6 @@ const App = () => {
           renderItem={({ item }) => (
             <View style={styles.itemContainer}>
               <Text style={[styles.markaText, { textAlign: 'center' }]}>{item.marka_nev}</Text>
-              {item.marka_kepek}
               <Image source={{ uri: Ipcim.Ipcim + item.marka_kepek }} style={styles.image} />
               <View style={styles.imageContainer}>
 
