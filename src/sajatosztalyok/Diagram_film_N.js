@@ -12,7 +12,7 @@ const Diagram_film_N = () => {
 
   const getMovies = async () => {
     try {
-      const response = await fetch(IP.Ipcim+'diagram');
+      const response = await fetch(IP.Ipcim+'diagram_nikie');
       const json = await response.json();
       setData(json);
       for (let elem of json){

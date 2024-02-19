@@ -33,7 +33,7 @@ const Torles_marka_2 = () => {
       bevitel2: szam
     };
 
-    fetch(IP.Ipcim + "torles_marka", {
+    fetch(IP.Ipcim + "torles_marka_motorok", {
       method: "DELETE",
       body: JSON.stringify(bemenet),
       headers: { "Content-type": "application/json; charset=UTF-8" }
