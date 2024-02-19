@@ -36,6 +36,7 @@ import Torles_2 from './sajatosztalyok/Torles_2'
 import Torles_marka_2 from './sajatosztalyok/Torles_marka_2'
 
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -114,6 +115,8 @@ class App extends Component {
                 Márka Nikié
               </Link>
             </li>
+
+            
 
                      
 
@@ -281,6 +284,7 @@ class App extends Component {
             <Route path="/Proba_2" component={Proba_2} />
             <Route path="/Torles_2" component={Torles_2} />
             <Route path="/Torles_marka_2" component={Torles_marka_2} />
+            
 
 
           </Switch>
