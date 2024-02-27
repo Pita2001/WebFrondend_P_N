@@ -1,15 +1,18 @@
-import React, {useEffect, useState} from 'react';
-import {ActivityIndicator, FlatList, Text, View} from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { ActivityIndicator, Button, FlatList, Text, View } from 'react-native';
 
-const App = () => {
+const IP=require('./Ipcim')
+
+const AdminProba = () => {
+  const [csere, setAscending] = useState(true); // Állítsa true-ra a növekvő rendezéshez, false-ra a csökkenő rendezéshez
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
   const getMovies = async () => {
     try {
-      const response = await fetch('https://reactnative.dev/movies.json');
+      const response = await fetch(IP.Ipcim+'autok');
       const json = await response.json();
-      setData(json.movies);
+      setData(json);
     } catch (error) {
       console.error(error);
     } finally {
@@ -17,21 +20,34 @@ const App = () => {
     }
   };
 
+  const EvSzures = () => {
+    const sortedData = [...data].sort((a, b) => {
+      if (csere) {
+        return a.auto_evjarat - b.auto_evjarat;
+      } else {
+        return b.auto_evjarat - a.auto_evjarat;
+      }
+    });
+    setData(sortedData);
+    setAscending(!csere);
+  };
+
   useEffect(() => {
     getMovies();
   }, []);
 
   return (
-    <View style={{flex: 1, padding: 24}}>
+    <View style={{ flex: 1, padding: 24 }}>
+      <Button title={csere ? 'Évjárat szerint növekvő' : 'Évjárat szerint csökkenő'} onPress={EvSzures} />
       {isLoading ? (
         <ActivityIndicator />
       ) : (
         <FlatList
           data={data}
-          keyExtractor={({id}) => id}
-          renderItem={({item}) => (
+          keyExtractor={({ id }) => id}
+          renderItem={({ item }) => (
             <Text>
-              {item.title}, {item.releaseYear}
+              {item.auto_modell}, {item.auto_evjarat}
             </Text>
           )}
         />
@@ -40,4 +56,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default AdminProba;

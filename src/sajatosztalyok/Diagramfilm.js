@@ -42,7 +42,7 @@ const App = () => {
             }
           },
         ]}
-        layout={{ width: 500, height: 500, title: 'Motorok' }}
+        layout={{ width: 500, height: 500, title: 'Autók' }}
       />
       {isLoading ? (
         <ActivityIndicator />
