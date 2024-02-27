@@ -38,7 +38,7 @@ const App = () => {
             x: dataCim, 
             y: dataDarabszam,
             marker: {
-              color: 'green', // Az elemek színe
+              color: 'green',
             }
           },
         ]}

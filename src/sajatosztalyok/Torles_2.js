@@ -85,45 +85,45 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
     alignItems: 'center',
-    backgroundColor: 'red', // Világoskék szín
+    backgroundColor: 'red',
   },
   headerText: {
     fontSize: 100,
     fontWeight: 'bold',
-    color: 'black', // Fehér szöveg
+    color: 'black',
   },
   content: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#f0f0f0', // Halvány szürke háttérszín
+    backgroundColor: '#f0f0f0',
   },
   itemContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 20,
-    backgroundColor: '#FFF', // Fehér háttér
+    backgroundColor: '#FFF',
     padding: 20,
     borderRadius: 10,
-    elevation: 3, // Árnyékozás
+    elevation: 3,
   },
   itemText: {
     fontSize: 100,
   },
   deleteButton: {
     backgroundColor: 'red',
-    paddingVertical: 40, // Növelt padding
-    paddingHorizontal: 20, // Növelt padding
+    paddingVertical: 40,
+    paddingHorizontal: 20,
     borderRadius: 50,
-    justifyContent: 'center', // A szöveg középre igazítása
-    alignItems: 'center', // A szöveg középre igazítása
-    borderWidth: 20, // Körvonal hozzáadása
-    borderColor: 'darkred', // Körvonal színe
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 20,
+    borderColor: 'darkred',
   },
   buttonText: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 60, // Nagyobb méretű szöveg
+    fontSize: 60,
   },
 });
 

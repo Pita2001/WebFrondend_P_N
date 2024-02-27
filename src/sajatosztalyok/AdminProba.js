@@ -4,7 +4,7 @@ import { ActivityIndicator, Button, FlatList, Text, View } from 'react-native';
 const IP=require('./Ipcim')
 
 const AdminProba = () => {
-  const [csere, setAscending] = useState(true); // Állítsa true-ra a növekvő rendezéshez, false-ra a csökkenő rendezéshez
+  const [csere, setAscending] = useState(true);
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 

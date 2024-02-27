@@ -50,7 +50,7 @@ const Torles_marka_2 = () => {
       <View style={styles.header}>
         <Text style={styles.headerText}>Motor Márkák</Text>
       </View>
-      <View style={styles.headerSpacer}></View> {/* Térköz a header és a content között */}
+      <View style={styles.headerSpacer}></View>
       <View style={styles.content}>
         {isLoading ? (
           <ActivityIndicator />

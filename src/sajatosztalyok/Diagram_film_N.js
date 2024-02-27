@@ -39,7 +39,7 @@ const Diagram_film_N = () => {
             x: dataCim, 
             y: dataDarabszam,
             marker: {
-              color: 'red', // Az elemek színe
+              color: 'red',
             }
           },
         ]}
