@@ -41,9 +41,9 @@ const AdminProba = () => {
   return (
     <View style={{ flex: 1, padding: 24}}>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between' , marginBottom: 10, paddingLeft: '95px'}}>
-      <Button title={`Modell ${csere.modell ? 'növekvő' : 'csökkenő'}`} onPress={() => rendezes('modell')} color="#ff5733" />
-      <Button title={`Évjárat ${csere.evjarat ? 'növekvő' : 'csökkenő'}`} onPress={() => rendezes('evjarat')} color="#ff5733" />
-        <Button title={`Hengerűrtartalom ${csere.hengerurtartalom ? 'növekvő' : 'csökkenő'}`} onPress={() => rendezes('hengerurtartalom')} color="#ff5733" />
+      <Button title={`Modell ${csere.modell ? 'növekvő' : 'csökkenő'}`} onPress={() => rendezes('modell')} color="#FF0000" />
+      <Button title={`Évjárat ${csere.evjarat ? 'növekvő' : 'csökkenő'}`} onPress={() => rendezes('evjarat')} color="#FF0000" />
+        <Button title={`Hengerűrtartalom ${csere.hengerurtartalom ? 'növekvő' : 'csökkenő'}`} onPress={() => rendezes('hengerurtartalom')} color="#FF0000" />
       </View>
       {isLoading ? (
         <ActivityIndicator size="large" color="#0000ff" />
