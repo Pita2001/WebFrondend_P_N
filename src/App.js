@@ -16,7 +16,6 @@ import BoardModerator from "./components/board-moderator.component";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 import Admin from './sajatosztalyok/Admin'
-import Kereses from "./sajatosztalyok/Kereses"
 import Proba from './sajatosztalyok/Proba'
 import AdminProba from './sajatosztalyok/AdminProba'
 import Marka from './sajatosztalyok/Marka'
@@ -29,7 +28,6 @@ import Torles_marka from './sajatosztalyok/Torles_marka'
 
 import Marka_2 from './sajatosztalyok/Marka_2'
 import Diagram_film_N from "./sajatosztalyok/Diagram_film_N";
-import Kereses_2 from "./sajatosztalyok/Kereses_2"
 import ProbaAdmin_2 from './sajatosztalyok/ProbaAdmin_2'
 import Proba_2 from "./sajatosztalyok/Proba_2";
 import Torles_2 from './sajatosztalyok/Torles_2'
@@ -80,17 +78,6 @@ class App extends Component {
           </Link>
           <div className="navbar-nav mr-auto">
  
-            <li className="nav-item">
-              <Link to={"/Kereses"} className="nav-link">
-                Keresés
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link to={"/Kereses_2"} className="nav-link">
-                Keresés Nikié
-              </Link>
-            </li>
 
             <li className="nav-item">
               <Link to={"/Proba"} className="nav-link">
@@ -268,7 +255,6 @@ class App extends Component {
             <Route path="/mod" component={BoardModerator} />
            
             <Route path="/Admin" component={Admin} />
-            <Route path="/Kereses" component={Kereses} />
             <Route path="/Proba" component={Proba} />
             <Route path="/AdminProba" component={AdminProba} />
             <Route path="/Marka" component={Marka} />
@@ -280,7 +266,6 @@ class App extends Component {
             <Route path="/Marka_2" component={Marka_2} />
             <Route path="/Diagram_film_N" component={Diagram_film_N} />
             <Route path="/ProbaAdmin_2" component={ProbaAdmin_2} />
-            <Route path="/Kereses_2" component={Kereses_2} />
             <Route path="/Proba_2" component={Proba_2} />
             <Route path="/Torles_2" component={Torles_2} />
             <Route path="/Torles_marka_2" component={Torles_marka_2} />
