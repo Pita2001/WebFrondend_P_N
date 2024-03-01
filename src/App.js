@@ -15,8 +15,8 @@ import BoardModerator from "./components/board-moderator.component";
 
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
-import Admin from './sajatosztalyok/Admin'
-import Proba from './sajatosztalyok/Proba'
+
+
 import AdminProba from './sajatosztalyok/AdminProba'
 import Marka from './sajatosztalyok/Marka'
 import Diagramfilm from './sajatosztalyok/Diagramfilm'
@@ -29,7 +29,6 @@ import Torles_marka from './sajatosztalyok/Torles_marka'
 import Marka_2 from './sajatosztalyok/Marka_2'
 import Diagram_film_N from "./sajatosztalyok/Diagram_film_N";
 import ProbaAdmin_2 from './sajatosztalyok/ProbaAdmin_2'
-import Proba_2 from "./sajatosztalyok/Proba_2";
 import Torles_2 from './sajatosztalyok/Torles_2'
 import Torles_marka_2 from './sajatosztalyok/Torles_marka_2'
 
@@ -80,26 +79,14 @@ class App extends Component {
  
 
             <li className="nav-item">
-              <Link to={"/Proba"} className="nav-link">
-                Proba
-              </Link>
-            </li>
-            
-            <li className="nav-item">
-              <Link to={"/Proba_2"} className="nav-link">
-                Proba Nikié
-              </Link>
-            </li>
-
-            <li className="nav-item">
               <Link to={"/Marka"} className="nav-link">
-                Marka
+                Autó márka
               </Link>
             </li>
 
             <li className="nav-item">
               <Link to={"/Marka_2"} className="nav-link">
-                Márka Nikié
+                Motor márka
               </Link>
             </li>
 
@@ -116,18 +103,11 @@ class App extends Component {
             )}
 
 
-            {showAdminBoard && (
-              <li className="nav-item">
-                <Link to={"/Admin"} className="nav-link">
-                  Admin
-                </Link>
-              </li>
-            )}
 
             {showAdminBoard && (
             <li className="nav-item">
               <Link to={"/Torles"} className="nav-link">
-                Torles
+                Autó modell törlés
               </Link>
             </li>
             )}
@@ -135,7 +115,7 @@ class App extends Component {
           {showAdminBoard && (
             <li className="nav-item">
               <Link to={"/Torles_2"} className="nav-link">
-                Torles Nikié
+                Motor modell törlés
               </Link>
             </li>
             )}
@@ -143,7 +123,7 @@ class App extends Component {
             {showAdminBoard && (
               <li className="nav-item">
                 <Link to={"/Torles_marka"} className="nav-link">
-                Torles_marka
+                Autó márka törlés
                 </Link>
               </li>
               )}
@@ -151,7 +131,7 @@ class App extends Component {
           {showAdminBoard && (
               <li className="nav-item">
                 <Link to={"/Torles_marka_2"} className="nav-link">
-                Torles_marka Nikié
+                Motor márka törlés
                 </Link>
               </li>
               )}  
@@ -159,7 +139,7 @@ class App extends Component {
             {showAdminBoard && (
               <li className="nav-item">
                 <Link to={"/AdminProba"} className="nav-link">
-                  AdminProba
+                  Műszaki adatok autokról
                 </Link>
               </li>
             )}
@@ -167,7 +147,7 @@ class App extends Component {
         {showAdminBoard && (
               <li className="nav-item">
                 <Link to={"/ProbaAdmin_2"} className="nav-link">
-                  AdminProba Nikié
+                  Műszaki adatok motorokról
                 </Link>
               </li>
             )}
@@ -175,7 +155,7 @@ class App extends Component {
             {showAdminBoard && (
               <li className="nav-item">
                 <Link to={"/Diagramfilm"} className="nav-link">
-                  Diagramfilm
+                  Auto diagram
                 </Link>
               </li>
             )}
@@ -183,7 +163,7 @@ class App extends Component {
             {showAdminBoard && (
               <li className="nav-item">
                 <Link to={"/Diagram_film_N"} className="nav-link">
-                  Diagram Nikié
+                  Motor diagram
                 </Link>
               </li>
             )}
@@ -254,8 +234,8 @@ class App extends Component {
             <Route path="/user" component={BoardUser} />
             <Route path="/mod" component={BoardModerator} />
            
-            <Route path="/Admin" component={Admin} />
-            <Route path="/Proba" component={Proba} />
+
+
             <Route path="/AdminProba" component={AdminProba} />
             <Route path="/Marka" component={Marka} />
             <Route path="/Diagramfilm" component={Diagramfilm} />
@@ -266,7 +246,6 @@ class App extends Component {
             <Route path="/Marka_2" component={Marka_2} />
             <Route path="/Diagram_film_N" component={Diagram_film_N} />
             <Route path="/ProbaAdmin_2" component={ProbaAdmin_2} />
-            <Route path="/Proba_2" component={Proba_2} />
             <Route path="/Torles_2" component={Torles_2} />
             <Route path="/Torles_marka_2" component={Torles_marka_2} />
             
