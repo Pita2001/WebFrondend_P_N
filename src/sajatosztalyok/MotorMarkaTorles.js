@@ -3,13 +3,13 @@ import { ActivityIndicator, FlatList, Text, View, TouchableOpacity, StyleSheet, 
 
 const IP = require('./Ipcim');
 
-const Torles_2= () => {
+const MotorMarkaTorles = () => {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
   const letolt_motor = async () => {
     try {
-      const response = await fetch(IP.Ipcim + 'motorok');
+      const response = await fetch(IP.Ipcim + 'marka_motorok');
       const json = await response.json();
       setData(json);
     } catch (error) {
@@ -30,10 +30,10 @@ const Torles_2= () => {
     }
 
     var bemenet = {
-      bevitel1: szam
+      bevitel2: szam
     };
 
-    fetch(IP.Ipcim + "torles_motorok", {
+    fetch(IP.Ipcim + "torles_marka_motorok", {
       method: "DELETE",
       body: JSON.stringify(bemenet),
       headers: { "Content-type": "application/json; charset=UTF-8" }
@@ -48,21 +48,22 @@ const Torles_2= () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Motorok</Text>
+        <Text style={styles.headerText}>Motor Márkák</Text>
       </View>
+      <View style={styles.headerSpacer}></View>
       <View style={styles.content}>
         {isLoading ? (
           <ActivityIndicator />
         ) : (
           <FlatList
             data={data}
-            keyExtractor={({ motor_id }) => motor_id}
+            keyExtractor={({ marka_id }) => marka_id}
             renderItem={({ item }) => (
               <View style={styles.itemContainer}>
-                <Text numberOfLines={2} style={styles.itemText}>{item.motor_id}, {item.motor_modell}</Text>
+                <Text numberOfLines={2} style={styles.itemText}>{item.marka_id}, {item.marka_nev}</Text>
                 <TouchableOpacity
                   style={styles.deleteButton}
-                  onPress={() => torles(item.motor_id)}
+                  onPress={() => torles(item.marka_id)}
                 >
                   <Text style={styles.buttonText}>TÖRLÉS</Text>
                 </TouchableOpacity>
@@ -78,53 +79,53 @@ const Torles_2= () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ECEFF1', // Világos szürke háttér
   },
   header: {
-    padding: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    paddingVertical: 20,
+    backgroundColor: '#607D8B', // Világoskék szín
     alignItems: 'center',
-    backgroundColor: 'red',
   },
   headerText: {
-    fontSize: 100,
+    fontSize: 120,
     fontWeight: 'bold',
-    color: 'black',
+    color: 'white', // Fehér szöveg
   },
+  headerSpacer: {
+    marginBottom: 60, // Térköz a header és a content között
+  },
+  
   content: {
     flex: 1,
-    padding: 20,
-    backgroundColor: '#f0f0f0',
+    paddingHorizontal: 20,
   },
+
   itemContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 20,
-    backgroundColor: '#FFF',
+    backgroundColor: '#FFF', // Fehér háttér
     padding: 20,
     borderRadius: 10,
-    elevation: 3,
+    elevation: 3, // Árnyékozás
   },
   itemText: {
-    fontSize: 100,
+    fontSize: 40,
+    color: '#455A64', // Sötétszürke szöveg
+    
   },
   deleteButton: {
-    backgroundColor: 'red',
-    paddingVertical: 40,
+    backgroundColor: '#D32F2F', // Piros szín
+    paddingVertical: 10,
     paddingHorizontal: 20,
-    borderRadius: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 20,
-    borderColor: 'darkred',
+    borderRadius: 5,
   },
   buttonText: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 60,
+    fontSize: 50,
   },
 });
 
-export default Torles_2;
+export default MotorMarkaTorles;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList, Text, View, Image, StyleSheet } from 'react-native';
 import Ipcim from './Ipcim';
 
-const Marka_2 = () => {
+const MotorMarkak = () => {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
@@ -76,4 +76,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Marka_2;
+export default MotorMarkak;

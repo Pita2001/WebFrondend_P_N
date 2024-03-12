@@ -17,20 +17,19 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 
 
-import AdminProba from './sajatosztalyok/AdminProba'
-import Marka from './sajatosztalyok/Marka'
-import Diagramfilm from './sajatosztalyok/Diagramfilm'
-import Torles from './sajatosztalyok/Torles'
-import Torles_marka from './sajatosztalyok/Torles_marka'
+import AutoAdatok from './sajatosztalyok/AutoAdatok'
+import AutoMarka from './sajatosztalyok/AutoMarka'
+import AutoModellTorles from './sajatosztalyok/AutoModellTorles'
+import AutoMarkaTorles from './sajatosztalyok/AutoMarkaTorles'
+
 
 
 //Nikié
 
-import Marka_2 from './sajatosztalyok/Marka_2'
-import Diagram_film_N from "./sajatosztalyok/Diagram_film_N";
-import ProbaAdmin_2 from './sajatosztalyok/ProbaAdmin_2'
-import Torles_2 from './sajatosztalyok/Torles_2'
-import Torles_marka_2 from './sajatosztalyok/Torles_marka_2'
+import MotorMarkak from './sajatosztalyok/MotorMarkak'
+import MotorAdatok from './sajatosztalyok/MotorAdatok'
+import MotorModellTorles from './sajatosztalyok/MotorModellTorles'
+import MotorMarkaTorles from './sajatosztalyok/MotorMarkaTorles'
 
 
 
@@ -79,34 +78,34 @@ class App extends Component {
  
 
             <li className="nav-item">
-              <Link to={"/Marka"} className="nav-link">
+              <Link to={"/AutoMarka"} className="nav-link">
                 Autó márka
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link to={"/Marka_2"} className="nav-link">
+              <Link to={"/MotorMarkak"} className="nav-link">
                 Motor márka
               </Link>
             </li>
 
-            
-
-                     
-
-            {showModeratorBoard && (
               <li className="nav-item">
-                <Link to={"/mod"} className="nav-link">
-                  Moderator
+                <Link to={"/AutoAdatok"} className="nav-link">
+                  Műszaki adatok autokról
                 </Link>
               </li>
-            )}
+
+              <li className="nav-item">
+                <Link to={"/MotorAdatok"} className="nav-link">
+                  Műszaki adatok motorokról
+                </Link>
+              </li>
 
 
 
             {showAdminBoard && (
             <li className="nav-item">
-              <Link to={"/Torles"} className="nav-link">
+              <Link to={"/AutoModellTorles"} className="nav-link">
                 Autó modell törlés
               </Link>
             </li>
@@ -114,7 +113,7 @@ class App extends Component {
 
           {showAdminBoard && (
             <li className="nav-item">
-              <Link to={"/Torles_2"} className="nav-link">
+              <Link to={"/MotorModellTorles"} className="nav-link">
                 Motor modell törlés
               </Link>
             </li>
@@ -122,7 +121,7 @@ class App extends Component {
 
             {showAdminBoard && (
               <li className="nav-item">
-                <Link to={"/Torles_marka"} className="nav-link">
+                <Link to={"/AutoMarkaTorles"} className="nav-link">
                 Autó márka törlés
                 </Link>
               </li>
@@ -130,65 +129,16 @@ class App extends Component {
 
           {showAdminBoard && (
               <li className="nav-item">
-                <Link to={"/Torles_marka_2"} className="nav-link">
+                <Link to={"/MotorMarkaTorles"} className="nav-link">
                 Motor márka törlés
                 </Link>
               </li>
               )}  
 
-            {showAdminBoard && (
-              <li className="nav-item">
-                <Link to={"/AdminProba"} className="nav-link">
-                  Műszaki adatok autokról
-                </Link>
-              </li>
-            )}
-
-        {showAdminBoard && (
-              <li className="nav-item">
-                <Link to={"/ProbaAdmin_2"} className="nav-link">
-                  Műszaki adatok motorokról
-                </Link>
-              </li>
-            )}
-
-            {showAdminBoard && (
-              <li className="nav-item">
-                <Link to={"/Diagramfilm"} className="nav-link">
-                  Auto diagram
-                </Link>
-              </li>
-            )}
-
-            {showAdminBoard && (
-              <li className="nav-item">
-                <Link to={"/Diagram_film_N"} className="nav-link">
-                  Motor diagram
-                </Link>
-              </li>
-            )}
-
-            {currentUser && (
-              <li className="nav-item">
-                <Link to={"/user"} className="nav-link">
-                  User
-                </Link>
-              </li>
-            )}
           </div>
         
          
-          <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
-              Another action
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
-              Separated link
-            </NavDropdown.Item>
-          </NavDropdown>
+
         </Nav>
         <Nav>
         {currentUser ? (
@@ -236,21 +186,20 @@ class App extends Component {
            
 
 
-            <Route path="/AdminProba" component={AdminProba} />
-            <Route path="/Marka" component={Marka} />
-            <Route path="/Diagramfilm" component={Diagramfilm} />
-            <Route path="/Torles" component={Torles} />
-            <Route path="/Torles_marka" component={Torles_marka} />
+            <Route path="/AutoAdatok" component={AutoAdatok} />
+            <Route path="/AutoMarka" component={AutoMarka} />
+            <Route path="/AutoModellTorles" component={AutoModellTorles} />
+            <Route path="/AutoMarkaTorles" component={AutoMarkaTorles} />
 
-
-            <Route path="/Marka_2" component={Marka_2} />
-            <Route path="/Diagram_film_N" component={Diagram_film_N} />
-            <Route path="/ProbaAdmin_2" component={ProbaAdmin_2} />
-            <Route path="/Torles_2" component={Torles_2} />
-            <Route path="/Torles_marka_2" component={Torles_marka_2} />
             
 
+            <Route path="/MotorMarkak" component={MotorMarkak} />
+            <Route path="/MotorAdatok" component={MotorAdatok} />
+            <Route path="/MotorModellTorles" component={MotorModellTorles} />
+            <Route path="/MotorMarkaTorles" component={MotorMarkaTorles} />
+            
 
+            
           </Switch>
         </div>
       </div>

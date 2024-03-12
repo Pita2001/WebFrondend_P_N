@@ -3,7 +3,7 @@ import { StyleSheet, ActivityIndicator, FlatList, Text, View, TouchableOpacity }
 
 const IP = require('./Ipcim');
 
-const App = () => {
+const AutoMarkaTorles = () => {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
@@ -126,4 +126,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default AutoMarkaTorles;

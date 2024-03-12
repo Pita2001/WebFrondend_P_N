@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList, Text, View, Image, StyleSheet } from 'react-native';
 import Ipcim from './Ipcim';
 
-const App = () => {
+const AutoMarka = () => {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
@@ -77,4 +77,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default AutoMarka;
