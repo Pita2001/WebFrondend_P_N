@@ -102,6 +102,9 @@ class App extends Component {
               </li>
             
           </div>
+
+          </Nav>
+        <Nav>
             
           {showAdminBoard && (
         <NavDropdown title="Törlések" id="collasible-nav-dropdown">
@@ -126,8 +129,7 @@ class App extends Component {
         
          
 
-        </Nav>
-        <Nav>
+
           
         {currentUser ? (
             <div className="navbar-nav ml-auto">
