@@ -24,7 +24,7 @@ const Torles_marka_2 = () => {
   }, []);
 
   const torles = (szam) => {
-    const confirmed = window.confirm('Biztos vagy benne, hogy törölni szeretnéd ezt a motort?');
+    const confirmed = window.confirm('Biztos vagy benne, hogy törölni szeretnéd ezt a márkát?');
     if (!confirmed) {
       return;
     }

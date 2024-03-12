@@ -33,6 +33,7 @@ const ProbaAdmin_2 = () => {
     setData(sortedData);
     setCsere(prevState => ({ ...prevState, [oszlop]: !prevState[oszlop] }));
   };
+  
 
   useEffect(() => {
     getMotorok();
