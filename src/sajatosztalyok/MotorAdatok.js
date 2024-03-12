@@ -33,6 +33,7 @@ const MotorAdatok = () => {
     setData(sortedData);
     setCsere(prevState => ({ ...prevState, [oszlop]: !prevState[oszlop] }));
   };
+  
 
   useEffect(() => {
     getMotorok();
