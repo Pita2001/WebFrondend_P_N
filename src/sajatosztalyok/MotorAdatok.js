@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Button, Text, View } from 'react-native';
+import { ActivityIndicator, Text, View, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 
 const IP = require('./Ipcim');
 
@@ -33,7 +33,6 @@ const MotorAdatok = () => {
     setData(sortedData);
     setCsere(prevState => ({ ...prevState, [oszlop]: !prevState[oszlop] }));
   };
-  
 
   useEffect(() => {
     getMotorok();
@@ -41,10 +40,16 @@ const MotorAdatok = () => {
 
   return (
     <View style={{ flex: 1, padding: 24, backgroundColor: '#f0f0f0' }}>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 10, }}>
-        <Button title={`Modell ${csere.modell ? 'növekvő' : 'csökkenő'}`} onPress={() => rendezes('modell')} color="#008000" />
-        <Button title={`Évjárat ${csere.evjarat ? 'növekvő' : 'csökkenő'}`} onPress={() => rendezes('evjarat')} color="#008000" />
-        <Button title={`Hengerűrtartalom ${csere.hengerurtartalom ? 'növekvő' : 'csökkenő'}`} onPress={() => rendezes('hengerurtartalom')} color="#008000" />
+      <View style={{ flexDirection: 'row', justifyContent: 'center', marginBottom: 10 }}>
+        <TouchableOpacity onPress={() => rendezes('modell')} style={styles.button}>
+          <Text style={styles.buttonText}>{`Modell ${csere.modell ? 'növekvő' : 'csökkenő'}`}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => rendezes('evjarat')} style={styles.button}>
+          <Text style={styles.buttonText}>{`Évjárat ${csere.evjarat ? 'növekvő' : 'csökkenő'}`}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => rendezes('hengerurtartalom')} style={styles.button}>
+          <Text style={styles.buttonText}>{`Hengerűrtartalom ${csere.hengerurtartalom ? 'növekvő' : 'csökkenő'}`}</Text>
+        </TouchableOpacity>
       </View>
       {isLoading ? (
         <ActivityIndicator size="large" color="#0000ff" />
@@ -57,9 +62,9 @@ const MotorAdatok = () => {
           </View>
           {data.map(item => (
             <View key={item.id} style={{ flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1, paddingTop: 5, paddingBottom: 5 }}>
-              <Text style={{ flex: 1, textAlign: 'center', color: '#666' }}>{item.motor_modell}</Text>
-              <Text style={{ flex: 1, textAlign: 'center', color: '#666' }}>{item.motor_evjarat}</Text>
-              <Text style={{ flex: 1, textAlign: 'center', color: '#666' }}>{item.motor_hengerurt}</Text>
+              <Text style={{ flex: 1, textAlign: 'center', color: '#666', fontSize: 18 }}>{item.motor_modell}</Text>
+              <Text style={{ flex: 1, textAlign: 'center', color: '#666', fontSize: 18 }}>{item.motor_evjarat}</Text>
+              <Text style={{ flex: 1, textAlign: 'center', color: '#666', fontSize: 18 }}>{item.motor_hengerurt}</Text>
             </View>
           ))}
         </View>
@@ -67,5 +72,18 @@ const MotorAdatok = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: '#008000',
+    padding: 10,
+    borderRadius: 5,
+    margin: 5,
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
+});
 
 export default MotorAdatok;

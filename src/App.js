@@ -72,7 +72,7 @@ class App extends Component {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
         <Link to={"/"} className="navbar-brand">
-            Záródoga
+            Autók és motorok
           </Link>
           <div className="navbar-nav mr-auto">
  
@@ -100,47 +100,35 @@ class App extends Component {
                   Műszaki adatok motorokról
                 </Link>
               </li>
-
-
-
-            {showAdminBoard && (
-            <li className="nav-item">
-              <Link to={"/AutoModellTorles"} className="nav-link">
-                Autó modell törlés
-              </Link>
-            </li>
-            )}
-
-          {showAdminBoard && (
-            <li className="nav-item">
-              <Link to={"/MotorModellTorles"} className="nav-link">
-                Motor modell törlés
-              </Link>
-            </li>
-            )}
-
-            {showAdminBoard && (
-              <li className="nav-item">
-                <Link to={"/AutoMarkaTorles"} className="nav-link">
-                Autó márka törlés
-                </Link>
-              </li>
-              )}
-
-          {showAdminBoard && (
-              <li className="nav-item">
-                <Link to={"/MotorMarkaTorles"} className="nav-link">
-                Motor márka törlés
-                </Link>
-              </li>
-              )}  
-
+            
           </div>
+            
+          {showAdminBoard && (
+        <NavDropdown title="Törlések" id="collasible-nav-dropdown">
+
+        <NavDropdown.Item href="/AutoMarkaTorles">
+          Autó márka törlés
+          </NavDropdown.Item>
+
+        <NavDropdown.Item href="/MotorMarkaTorles">
+        Motor márka törlés
+        </NavDropdown.Item>
+        
+        <NavDropdown.Item href="/AutoModellTorles">
+          Autó modellek törlése
+        </NavDropdown.Item>
+
+        <NavDropdown.Item href="/MotorModellTorles">
+        Motor modellek törlése
+        </NavDropdown.Item>
+      </NavDropdown>
+      )}
         
          
 
         </Nav>
         <Nav>
+          
         {currentUser ? (
             <div className="navbar-nav ml-auto">
               <li className="nav-item">
@@ -168,6 +156,8 @@ class App extends Component {
                 </Link>
               </li>
             </div>
+
+
           )}
           
         </Nav>
