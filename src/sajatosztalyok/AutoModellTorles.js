@@ -59,7 +59,7 @@ const AutoModellTorles = () => {
           renderItem={({ item }) => (
             <View style={styles.itemContainer}>
               <Text numberOfLines={2} style={styles.itemText}>
-                {item.auto_id}, {item.auto_modell}
+                 {item.auto_modell}
               </Text>
               <TouchableOpacity style={styles.button} onPress={() => handleDelete(item.auto_id)}>
                 <Text style={styles.buttonText}>Törlés</Text>
@@ -79,13 +79,13 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   header: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#008000',
     paddingVertical: 15,
     marginBottom: 10,
     borderRadius: 10,
   },
   headerText: {
-    fontSize: 24,
+    fontSize: 40,
     fontWeight: 'bold',
     color: '#fff',
     textAlign: 'center',
@@ -108,14 +108,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   button: {
-    backgroundColor: '#ff5722',
-    paddingVertical: 8,
-    paddingHorizontal: 15,
+    backgroundColor: '#FF0000',
+    paddingVertical: 15,
+    paddingHorizontal: 25,
     borderRadius: 5,
   },
   buttonText: {
     color: '#fff',
     fontWeight: 'bold',
+    fontSize:18,
   },
   emptyText: {
     textAlign: 'center',

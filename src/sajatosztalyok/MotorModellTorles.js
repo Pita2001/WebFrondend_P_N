@@ -48,7 +48,7 @@ const MotorModellTorles= () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Motorok</Text>
+        <Text style={styles.headerText}>MOTOROK</Text>
       </View>
       <View style={styles.content}>
         {isLoading ? (
@@ -59,7 +59,7 @@ const MotorModellTorles= () => {
             keyExtractor={({ motor_id }) => motor_id}
             renderItem={({ item }) => (
               <View style={styles.itemContainer}>
-                <Text numberOfLines={2} style={styles.itemText}>{item.motor_id}, {item.motor_modell}</Text>
+                <Text numberOfLines={2} style={styles.itemText}>{item.motor_modell.toUpperCase()}</Text>
                 <TouchableOpacity
                   style={styles.deleteButton}
                   onPress={() => torles(item.motor_id)}
@@ -85,12 +85,13 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
     alignItems: 'center',
-    backgroundColor: 'red',
+    backgroundColor: '#808080',
   },
   headerText: {
-    fontSize: 100,
+    fontSize: 30,
     fontWeight: 'bold',
-    color: 'black',
+    color: '#fff',
+    
   },
   content: {
     flex: 1,
@@ -102,28 +103,34 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 20,
-    backgroundColor: '#FFF',
+    backgroundColor: '#fff',
     padding: 20,
     borderRadius: 10,
     elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
   },
   itemText: {
-    fontSize: 100,
+    fontSize: 20,
+    fontWeight: 'bold',
   },
   deleteButton: {
-    backgroundColor: 'red',
-    paddingVertical: 40,
+    backgroundColor: '#FF0000',
+    paddingVertical: 10,
     paddingHorizontal: 20,
-    borderRadius: 50,
+    borderRadius: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 20,
-    borderColor: 'darkred',
   },
   buttonText: {
-    color: 'white',
+    color: '#fff',
     fontWeight: 'bold',
-    fontSize: 60,
+    fontSize: 16,
   },
 });
 

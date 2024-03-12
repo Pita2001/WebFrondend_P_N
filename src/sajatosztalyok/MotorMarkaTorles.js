@@ -79,52 +79,51 @@ const MotorMarkaTorles = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ECEFF1', // Világos szürke háttér
+    backgroundColor: '#ECEFF1', 
   },
   header: {
-    paddingVertical: 20,
-    backgroundColor: '#607D8B', // Világoskék szín
+    paddingVertical: 10,
+    backgroundColor: '#607D8B', 
     alignItems: 'center',
   },
   headerText: {
-    fontSize: 120,
+    fontSize: 30,
     fontWeight: 'bold',
-    color: 'white', // Fehér szöveg
+    color: 'white', 
   },
   headerSpacer: {
-    marginBottom: 60, // Térköz a header és a content között
+    marginBottom: 20, 
   },
   
   content: {
     flex: 1,
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
   },
 
   itemContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 20,
-    backgroundColor: '#FFF', // Fehér háttér
-    padding: 20,
-    borderRadius: 10,
-    elevation: 3, // Árnyékozás
+    marginBottom: 10,
+    backgroundColor: '#FFF', 
+    padding: 10,
+    borderRadius: 5,
+    elevation: 3, 
   },
   itemText: {
-    fontSize: 40,
-    color: '#455A64', // Sötétszürke szöveg
-    
+    fontSize: 16,
+    color: '#455A64', 
   },
   deleteButton: {
-    backgroundColor: '#D32F2F', // Piros szín
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
+    backgroundColor: '#D32F2F', 
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderRadius: 3,
   },
   buttonText: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 50,
+    fontSize: 20,
   },
 });
 
