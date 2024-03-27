@@ -33,8 +33,8 @@ export default class Profile extends Component {
         <div>
         <header className="jumbotron">
           <h3>
-            <strong>Üdvözlet {currentUser.username} !!!</strong> 
-          </h3>
+          <strong id="profilÜdv">Üdvözöllek <span className="felhNev">{currentUser.username}</span>! 😃</strong>
+          </h3> 
         </header>
          {/*
         <p>

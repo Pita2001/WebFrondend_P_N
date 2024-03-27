@@ -31,9 +31,9 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div className="container">
-        <header className="jumbotron">
-          <h3>Üdvözlet</h3>
+      <div id="kezdoSav" className="container">
+        <header id="kezdoKocka" className="jumbotron">
+          <h3>Üdvözöllek a <span class="OldalNev">{"japán autók és motorok"}</span> világában! 😄</h3>
         </header>
       </div>
     );

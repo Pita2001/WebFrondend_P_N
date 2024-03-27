@@ -30,3 +30,28 @@ label {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+
+#kezdoSav{
+  background-color: black;
+}
+
+
+h3{
+  font-family: bold, fantasy;
+  text-align: center;
+  font-size: 75px;
+}
+
+.OldalNev{
+  color: green;
+}
+
+#profilÜdv{
+  font-family: serif;
+  font-style: italic;
+}
+
+.felhNev {
+  color: red;
+  text-decoration: underline;
+}
